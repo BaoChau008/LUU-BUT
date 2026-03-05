@@ -1,0 +1,86 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+/* BODY */
+body {font-family: 'Times New Roman', sans-serif;background-color: #f0f8ff;}
+
+/* CONTAINER */
+.container {width: 80%;margin: 20px auto;}
+
+/* BOX */
+.box {background-color: #fff;border: 1px solid #ccc;margin-bottom: 20px;padding: 15px;border-radius: 8px;}
+
+.title {text-align: center;font-weight: bold;margin-bottom: 10px;}
+
+.content {font-size: 14px;line-height: 1.6;text-align: justify;padding: 20px;}
+
+/* NAVBAR */
+.navbar {background: linear-gradient(135deg,#BDE0FE,#A2D2FF,#CDB4DB,#FFC8DD,#BDE0FE);text-align: center;}
+
+.navbar a {display: inline-block;color: #2c3e50;padding: 14px 20px;text-decoration: none;}
+
+.navbar a:hover {background: rgba(255,255,255,0.35);border-radius: 6px;}
+
+/* BANNER */
+.banner {background: linear-gradient(135deg, #a8c0ff, #fbc2eb);background-size: 200% 200%;animation: gradientMove 6s infinite alternate;height: 200px;display: flex;justify-content: space-between;align-items: center;padding: 20px 40px;position: relative;}
+
+.banner::after {content: "";position: absolute;width: 100%;height: 100%;background: url("https://www.transparenttextures.com/patterns/stardust.png");opacity: 0.3;}
+
+@keyframes gradientMove {0% {background-position: left;}100% {background-position: right;}}
+
+/* LEFT */
+.left-box {max-width: 300px;}
+
+.logo {width: 120px;}
+
+.schoolname, .address {color: darkblue;margin-top: 8px;}
+
+/* CENTER */
+.overlay {text-align: center;color: darkblue;flex: 1;animation: fadeIn 2s ease-in-out;}
+
+.overlay h1 {font-size: 36px;}
+
+.overlay h2 {font-size: 22px;margin-top: 10px;}
+
+@keyframes fadeIn {from {opacity: 0; transform: translateY(20px);}to {opacity: 1; transform: translateY(0);}}
+
+/* RIGHT */
+.right-box {display: grid;grid-template-columns: 1fr 1fr;gap: 10px;}
+
+.right-box img {width: 140px;height: 90px;object-fit: cover;border-radius: 10px;border: 3px solid white;transition: 0.3s;}
+
+.right-box img:hover {transform: scale(1.1);box-shadow: 0 10px 20px rgba(0,0,0,0.3);}
+
+/* SEARCH */
+.search {display: block;margin-left: auto;margin: 20px 40px;padding: 8px 14px;border-radius: 20px;border: 2px solid #ccc;}
+
+/* GRID */
+.grid {display: grid;grid-template-columns: repeat(3,1fr);gap: 20px;}
+
+.grid img {width: 100%;height: 220px;object-fit: cover;border-radius: 20px;}
+
+/* VIDEO */
+.video-container {display: grid;grid-template-columns: repeat(auto-fit,minmax(300px,1fr));gap: 20px;}
+
+.video-container iframe {width: 100%;height: 220px;border-radius: 12px;}
+
+/* FORM */
+.section {width: 60%;margin: 40px auto;padding: 25px;background: #f9f9f9;border-radius: 12px;}
+
+.feedback-form {display: flex;flex-direction: column;}
+
+.feedback-form input,
+.feedback-form textarea {padding: 10px;margin-top: 8px;border-radius: 8px;border: 1px solid #ccc;}
+
+.feedback-form button {margin-top: 15px;padding: 12px;background: #ff7aa2;color: white;border: none;border-radius: 8px;cursor: pointer;}
+
+.feedback-form button:hover {background: #ff4f81;}
+
+/* FOOTER */
+.footer {background: linear-gradient(135deg,#BDE0FE,#A2D2FF,#CDB4DB,#FFC8DD,#BDE0FE);padding: 40px 20px;}
+
+.footer-container {display: grid;grid-template-columns: repeat(auto-fit,minmax(250px,1fr));gap: 20px;}
+
+.footer-bottom {text-align: center;margin-top: 20px;color: #555;}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {.container {width: 95%;}.section {width: 90%;}}
